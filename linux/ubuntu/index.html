@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Index of /linux/ubuntu/</title>
+</head>
+<body>
+<h1>Index of /linux/ubuntu/</h1>
+<hr>
+<pre>
+<a href="../">../</a>
+<a href="dists/">dists/</a>
+<a href="pool/">pool/</a>
+<a href="InRelease">InRelease</a>
+<a href="Release">Release</a>
+<a href="Release.gpg">Release.gpg</a>
+</pre>
+<hr>
+<p>Add this repo:</p>
+<pre>
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/arkanz4idan.gpg] https://arkanz4idan.github.io/linux/ubuntu noble main" | sudo tee /etc/apt/sources.list.d/arkanz4idan.list
+curl -fsSL https://arkanz4idan.github.io/linux/ubuntu/Release.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/arkanz4idan.gpg
+sudo apt update
+sudo apt install copilot
+</pre>
+<hr>
+<address>arkanz4idan's Linux Repository — ubuntu (Debian-based)</address>
+</body>
+</html>
