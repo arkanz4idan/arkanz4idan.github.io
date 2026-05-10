@@ -33,7 +33,7 @@ const FORMULAS = [
   { tex: 'g = GM/r²',             label: 'Surface gravity' },
 ];
 
-const COS_URL = 'https://arkanz4idan.github.io/cospersent';
+const COS_URL = 'https://arkanz4idan.github.io/cospersent/index.html';
 
 // Fixed positions (as % of screen), spread out, avoiding top center where Hello World sits
 const POSITIONS = [
