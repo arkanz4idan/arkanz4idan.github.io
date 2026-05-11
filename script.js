@@ -9,6 +9,11 @@ const mouse = { x: -9999, y: -9999 };
 const TAU = Math.PI * 2;
 const rand = (a, b) => a + Math.random() * (b - a);
 
+const audio = document.querySelector('audio');
+document.addEventListener('click', () => {
+  audio.play();
+}, { once: true });
+
 // ── RESIZE ───────────────────────────────────────────────
 function resize() {
   W = canvas.width = window.innerWidth;
