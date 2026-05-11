@@ -1,11 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cos%</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cos%</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="cospersent.css" />
 </head>
 <body>
-    
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <nav>
+    <div class="nav-logo">cos<span>%</span></div>
+    <div class="nav-tag">EARLY BUILD</div>
+  </nav>
+
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero fade">
+      <p class="hero-eyebrow">// a linux distribution</p>
+      <h1 class="hero-title">cos<span class="pct">%</span></h1>
+      <p class="hero-formula">
+        <span class="ci">Ci(x)</span> = &minus;&int;<sub>x</sub><sup>&infin;</sup> cos(t)/t dt &nbsp;&mdash;&nbsp; where it all begins
+      </p>
+      <p class="hero-desc">
+        cos% is a Linux distribution currently in early development.
+        Install with a single command. No package, no GUI &mdash; just a shell script.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- INSTALL -->
+    <section class="section fade">
+      <p class="section-label">// install</p>
+      <p class="section-sub">For regular users. Pick your architecture and run the command.</p>
+
+      <div class="arch-grid">
+
+        <!-- x86_64 -->
+        <div class="arch-card">
+          <div class="arch-name"><span class="arch-dot"></span> x86_64</div>
+          <p class="arch-target">Standard 64-bit PCs &amp; laptops</p>
+          <div class="cmd-block">
+            <div class="cmd-bar">
+              <span class="cmd-type">curl</span>
+              <button class="copy-btn" data-cmd="bash <(curl -s https://arkanz4idan.github.io/cospersent/x86_64/install.sh)">copy</button>
+            </div>
+            <div class="cmd-code">
+              <span class="dollar">$ </span><span class="hl-cmd">bash</span> &lt;(<span class="hl-cmd">curl</span> -s <span class="hl-url">https://arkanz4idan.github.io/cospersent/x86_64/install.sh</span>)
+            </div>
+          </div>
+          <p class="also">or use <a class="wget-toggle">wget</a></p>
+          <div class="wget-block cmd-block">
+            <div class="cmd-bar">
+              <span class="cmd-type">wget</span>
+              <button class="copy-btn" data-cmd="bash <(wget -qO- https://arkanz4idan.github.io/cospersent/x86_64/install.sh)">copy</button>
+            </div>
+            <div class="cmd-code">
+              <span class="dollar">$ </span><span class="hl-cmd">bash</span> &lt;(<span class="hl-cmd">wget</span> -qO- <span class="hl-url">https://arkanz4idan.github.io/cospersent/x86_64/install.sh</span>)
+            </div>
+          </div>
+        </div>
+
+        <!-- ARM -->
+        <div class="arch-card">
+          <div class="arch-name"><span class="arch-dot"></span> ARM</div>
+          <p class="arch-target">ARM-based boards &amp; devices</p>
+          <div class="cmd-block">
+            <div class="cmd-bar">
+              <span class="cmd-type">curl</span>
+              <button class="copy-btn" data-cmd="bash <(curl -s https://arkanz4idan.github.io/cospersent/ARM/install.sh)">copy</button>
+            </div>
+            <div class="cmd-code">
+              <span class="dollar">$ </span><span class="hl-cmd">bash</span> &lt;(<span class="hl-cmd">curl</span> -s <span class="hl-url">https://arkanz4idan.github.io/cospersent/ARM/install.sh</span>)
+            </div>
+          </div>
+          <p class="also">or use <a class="wget-toggle">wget</a></p>
+          <div class="wget-block cmd-block">
+            <div class="cmd-bar">
+              <span class="cmd-type">wget</span>
+              <button class="copy-btn" data-cmd="bash <(wget -qO- https://arkanz4idan.github.io/cospersent/ARM/install.sh)">copy</button>
+            </div>
+            <div class="cmd-code">
+              <span class="dollar">$ </span><span class="hl-cmd">bash</span> &lt;(<span class="hl-cmd">wget</span> -qO- <span class="hl-url">https://arkanz4idan.github.io/cospersent/ARM/install.sh</span>)
+            </div>
+          </div>
+        </div>
+
+        <!-- Raspberry Pi -->
+        <div class="arch-card">
+          <div class="arch-name"><span class="arch-dot"></span> Raspberry Pi</div>
+          <p class="arch-target">RPi 3, 4 &amp; compatible — flashes directly</p>
+          <div class="cmd-block">
+            <div class="cmd-bar">
+              <span class="cmd-type">curl</span>
+              <button class="copy-btn" data-cmd="bash <(curl -s https://arkanz4idan.github.io/cospersent/raspberrypi/flash.sh)">copy</button>
+            </div>
+            <div class="cmd-code">
+              <span class="dollar">$ </span><span class="hl-cmd">bash</span> &lt;(<span class="hl-cmd">curl</span> -s <span class="hl-url">https://arkanz4idan.github.io/cospersent/raspberrypi/flash.sh</span>)
+            </div>
+          </div>
+          <p class="also">or use <a class="wget-toggle">wget</a></p>
+          <div class="wget-block cmd-block">
+            <div class="cmd-bar">
+              <span class="cmd-type">wget</span>
+              <button class="copy-btn" data-cmd="bash <(wget -qO- https://arkanz4idan.github.io/cospersent/raspberrypi/flash.sh)">copy</button>
+            </div>
+            <div class="cmd-code">
+              <span class="dollar">$ </span><span class="hl-cmd">bash</span> &lt;(<span class="hl-cmd">wget</span> -qO- <span class="hl-url">https://arkanz4idan.github.io/cospersent/raspberrypi/flash.sh</span>)
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- BUILD -->
+    <section class="section fade">
+      <p class="section-label">// build your own</p>
+      <p class="section-sub">For developers. Use cos% as a base to build your own custom distro.</p>
+
+      <div class="arch-grid">
+
+        <!-- build x86_64 -->
+        <div class="arch-card dev">
+          <div class="arch-name"><span class="arch-dot dev-dot"></span> x86_64 base</div>
+          <p class="arch-target">Build a custom distro for standard 64-bit</p>
+          <div class="cmd-block">
+            <div class="cmd-bar">
+              <span class="cmd-type">curl</span>
+              <button class="copy-btn" data-cmd="bash <(curl -s https://arkanz4idan.github.io/cospersent/build.sh)">copy</button>
+            </div>
+            <div class="cmd-code">
+              <span class="dollar">$ </span><span class="hl-cmd">bash</span> &lt;(<span class="hl-cmd">curl</span> -s <span class="hl-url">https://arkanz4idan.github.io/cospersent/build.sh</span>)
+            </div>
+          </div>
+        </div>
+
+        <!-- build ARM -->
+        <div class="arch-card dev">
+          <div class="arch-name"><span class="arch-dot dev-dot"></span> ARM base</div>
+          <p class="arch-target">Build a custom distro for ARM devices</p>
+          <div class="cmd-block">
+            <div class="cmd-bar">
+              <span class="cmd-type">curl</span>
+              <button class="copy-btn" data-cmd="bash <(curl -s https://arkanz4idan.github.io/cospersent/build-arm.sh)">copy</button>
+            </div>
+            <div class="cmd-code">
+              <span class="dollar">$ </span><span class="hl-cmd">bash</span> &lt;(<span class="hl-cmd">curl</span> -s <span class="hl-url">https://arkanz4idan.github.io/cospersent/build-arm.sh</span>)
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- INFO -->
+    <section class="section fade">
+      <p class="section-label">// info</p>
+      <div class="info-strip">
+        <div class="info-cell">
+          <p class="info-key">STATUS</p>
+          <p class="info-val">Early dev</p>
+        </div>
+        <div class="info-cell">
+          <p class="info-key">ARCHITECTURES</p>
+          <p class="info-val">x86_64 · ARM · RPi</p>
+        </div>
+        <div class="info-cell">
+          <p class="info-key">INSTALL METHOD</p>
+          <p class="info-val">curl · wget</p>
+        </div>
+        <div class="info-cell">
+          <p class="info-key">BY</p>
+          <p class="info-val">arkanz4idan</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">cos<span>%</span> &mdash; built by arkanz4idan</div>
+    <div class="footer-right">
+      <a href="https://github.com/arkanz4idan" target="_blank">github ↗</a>
+    </div>
+  </footer>
+
+  <script src="cospersent.js"></script>
 </body>
 </html>
