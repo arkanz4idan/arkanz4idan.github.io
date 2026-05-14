@@ -21,6 +21,8 @@ die()     { echo -e "${RED}[✗] $1${NC}"; exit 1; }
 # ── Root check ────────────────────────────────────────────────
 [[ $EUID -ne 0 ]] && die "Run as root: sudo bash install.sh"
 
+apt install -y parted dosfstools e2fsprogs debootstrap grub-efi-amd64
+
 clear
 echo -e "${CYAN}"
 echo "  ██████╗ ██████╗ ███████╗    ██████╗ "
