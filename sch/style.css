@@ -1,0 +1,51 @@
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    margin:30px;
+
+    background:white;
+
+    color:black;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    text-align:left;
+
+    border-bottom:2px solid black;
+
+    padding:8px;
+
+}
+
+td{
+
+    padding:8px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+a{
+
+    color:#0000EE;
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
+
+}
