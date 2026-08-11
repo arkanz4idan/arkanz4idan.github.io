@@ -1,51 +1,75 @@
-body{
-
-    font-family:Arial,Helvetica,sans-serif;
-
-    margin:30px;
-
-    background:white;
-
-    color:black;
-
+/* style.css */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
 }
 
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
+h1 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: normal;
 }
 
-th{
-
-    text-align:left;
-
-    border-bottom:2px solid black;
-
-    padding:8px;
-
+.separator {
+    border-top: 1px solid #000000;
+    margin: 10px 0 15px 0;
 }
 
-td{
-
-    padding:8px;
-
-    border-bottom:1px solid #ddd;
-
+.item {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    line-height: 1.5;
 }
 
-a{
-
-    color:#0000EE;
-
-    text-decoration:none;
-
+.icon {
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
-a:hover{
+.name {
+    flex-grow: 1;
+    margin-left: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
-    text-decoration:underline;
+.name a {
+    text-decoration: none;
+    color: #000000;
+}
 
+.name a:hover {
+    text-decoration: underline;
+}
+
+.actions {
+    margin-left: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: #000000;
+}
+
+.actions a {
+    text-decoration: none;
+    color: #0000ee;
+    margin-left: 8px;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}
+
+.loading, .error {
+    color: #666666;
+    font-style: italic;
+}
+
+.error {
+    color: #cc0000;
 }
