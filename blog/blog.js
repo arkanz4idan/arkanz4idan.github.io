@@ -10,29 +10,34 @@ const title = document.getElementById("page-title");
 const params = new URLSearchParams(window.location.search);
 const postName = params.get("post");
 
+
 async function loadPost(name) {
     if (!/^[a-zA-Z0-9_-]+$/.test(name)) {
         throw new Error("Invalid post name.");
     }
 
-    const url =
-        `/${CONFIG.postsPath}/${encodeURIComponent(name)}.md`;
+    const apiUrl =
+        `https://api.github.com/repos/${CONFIG.repoOwner}/${CONFIG.repoName}/contents/${CONFIG.postsPath}/${name}.md`;
 
-    const response = await fetch(url);
+    const response = await fetch(apiUrl);
 
     if (!response.ok) {
         throw new Error(`Post "${name}" not found.`);
     }
 
-    const text = await response.text();
+    const data = await response.json();
+
+    /*
+     * GitHub API returns the file content as Base64.
+     */
+
+    const markdown = decodeBase64(data.content);
 
     title.textContent = name;
-    content.innerHTML = `
-        <div class="post">
-            <pre>${escapeHTML(text)}</pre>
-        </div>
-    `;
+
+    content.innerHTML = marked.parse(markdown);
 }
+
 
 async function loadPostList() {
     const apiUrl =
@@ -42,7 +47,7 @@ async function loadPostList() {
 
     if (!response.ok) {
         throw new Error(
-            `Failed to load posts (Status: ${response.status}).`
+            `Failed to load posts. Status: ${response.status}`
         );
     }
 
@@ -56,8 +61,6 @@ async function loadPostList() {
         .sort((a, b) =>
             a.name.localeCompare(b.name)
         );
-
-    title.textContent = "Blog";
 
     if (posts.length === 0) {
         content.innerHTML = "<p>No posts found.</p>";
@@ -81,6 +84,21 @@ async function loadPostList() {
     content.innerHTML = html;
 }
 
+
+function decodeBase64(base64) {
+    const binary = atob(
+        base64.replace(/\s/g, "")
+    );
+
+    const bytes = Uint8Array.from(
+        binary,
+        char => char.charCodeAt(0)
+    );
+
+    return new TextDecoder("utf-8").decode(bytes);
+}
+
+
 function escapeHTML(text) {
     return text
         .replaceAll("&", "&amp;")
@@ -89,6 +107,7 @@ function escapeHTML(text) {
         .replaceAll('"', "&quot;")
         .replaceAll("'", "&#039;");
 }
+
 
 async function init() {
     try {
@@ -99,11 +118,12 @@ async function init() {
         }
     } catch (error) {
         content.innerHTML = `
-            <span class="error">
-                Error: ${escapeHTML(error.message)}
-            </span>
+            <p class="error">
+                ${escapeHTML(error.message)}
+            </p>
         `;
     }
 }
+
 
 init();
