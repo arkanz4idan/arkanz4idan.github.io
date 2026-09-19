@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 100px 25px 50px;
+}
+
+a {
+    color: #fff;
+}
+
+.item {
+    margin: 12px 0;
+}
+
+.error {
+    color: #ff5555;
+}
+
+.post {
+    line-height: 1.7;
+}
+
+pre {
+    background: #111;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+code {
+    background: #111;
+    padding: 2px 5px;
+}
