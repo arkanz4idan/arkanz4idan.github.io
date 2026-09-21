@@ -59,6 +59,10 @@ signUpButton.addEventListener("click", async () => {
     );
 });
 
-const user = await getCurrentUser();
+async function checkCurrentUser() {
+    const user = await getCurrentUser();
 
-console.log("Logged in user:", user);
+    console.log("Logged in user:", user);
+}
+
+checkCurrentUser();
