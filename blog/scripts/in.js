@@ -58,3 +58,7 @@ signUpButton.addEventListener("click", async () => {
         "Account created. Please check your email to verify your account."
     );
 });
+
+const user = await getCurrentUser();
+
+console.log("Logged in user:", user);
