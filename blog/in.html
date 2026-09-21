@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Void.System Blog</title>
+    <title>Void.System Blog Sign in</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,20 +28,44 @@
 
     <!-- Blog title -->
     <header class="blog-header">
-        <h1 id="page-title">BLOG TITLE</h1>
+        <h1 id="page-title">SIGN IN</h1>
     </header>
 
     <!-- Blog content -->
     <main class="blog-container">
         <article class="blog-content" id="content">
-            <p>Loading...</p>
+
+            <div class="auth-form">
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                    autocomplete="email"
+                >
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                    autocomplete="current-password"
+                >
+
+                <div class="auth-buttons">
+                    <button id="sign-in">SIGN IN</button>
+                    <button id="sign-up">SIGN UP</button>
+                </div>
+
+                <p id="auth-status"></p>
+
+            </div>
+
         </article>
     </main>
-    
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script src="scripts/data.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/in.js"></script>
 </body>
 </html>
