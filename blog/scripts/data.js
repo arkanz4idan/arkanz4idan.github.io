@@ -20,8 +20,15 @@ async function testDatabase() {
 
 testDatabase();
 
-async function register(email, password) {
-    const { data, error } = await db.auth.signUp({ email, password });
+async function register(email, password, captchaToken) {
+    const { data, error } = await db.auth.signUp({
+        email,
+        password,
+        options: {
+            captchaToken
+        }
+    });
+
     return { data, error };
 }
 
