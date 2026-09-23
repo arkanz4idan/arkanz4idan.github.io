@@ -107,7 +107,7 @@ googleLoginButton.addEventListener("click", async () => {
     const { error } = await db.auth.signInWithOAuth({
         provider: "google",
         options: {
-            redirectTo: `https://arkanz4idan.github.io/`
+            redirectTo: `https://arkanz4idan.github.io/blog/`
         }
     });
 
