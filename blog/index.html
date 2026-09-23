@@ -26,6 +26,15 @@
         alt="Void.System"
     >
 
+    <a id="account-button" class="account-button" href="in.html">
+        <span>ACCOUNT</span>
+        <img
+            id="account-avatar"
+            src="../assets/logo.png"
+            alt="Account"
+        >
+    </a>
+
     <!-- Blog title -->
     <header class="blog-header">
         <h1 id="page-title">BLOG TITLE</h1>
@@ -37,6 +46,29 @@
             <p>Loading...</p>
         </article>
     </main>
+
+    <section class="subscription">
+        <h2>SUBSCRIBE</h2>
+
+        <p>
+            Get notified when a new post is published.
+        </p>
+
+        <div class="subscription-form">
+            <input
+                id="subscription-email"
+                type="email"
+                placeholder="Your email"
+                autocomplete="email"
+            >
+
+            <button id="subscription-submit">
+                SUBSCRIBE
+            </button>
+        </div>
+
+        <p id="subscription-status"></p>
+    </section>
     
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

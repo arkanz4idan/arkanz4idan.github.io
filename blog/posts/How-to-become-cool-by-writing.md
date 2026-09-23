@@ -16,17 +16,17 @@ These are the quick to how becoming a blogger
    - Magazine
 
    or use services like
-   - [Medium](Medium.com)
-   - [substack](substack.com)
-   - [LinkedIn](linkedin.com)
-   - [Tumblr](tumblr.com)
-   - [Facebook](facebook.com)
+   - [Medium](https://www.Medium.com)
+   - [substack](https://www.substack.com)
+   - [LinkedIn](https://www.linkedin.com)
+   - [Tumblr](https://www.tumblr.com)
+   - [Facebook](https://www.facebook.com)
 
    and many more
 
    1. Through Websites
       
-      If you use website, you may find this by the url: `arkanz4idan.github.io/blog`, this url is a website from the github repo, so it's free. If you want to make one, you may [clone](github.com/arkanz4idan/arkanz4idan.github.io) it from [Github](github.com) using [Git](git-scm.com) or use your server and use [Cloudflare](cloudflare.com) or other **providers** to publicly spread your blog **fast**.
+      If you use website, you may find this by the url: `arkanz4idan.github.io/blog`, this url is a website from the github repo, so it's free. If you want to make one, you may [clone](https://www.github.com/arkanz4idan/arkanz4idan.github.io) it from [Github](https://www.github.com) using [Git](https://www.git-scm.com) or use your server and use [Cloudflare](https://www.cloudflare.com) or other **providers** to publicly spread your blog **fast**.
         > Pros: by using this method you can spread using the internet. 
         
         > Cons: You Need to be online to reach the website you made.

@@ -66,3 +66,20 @@ async function checkCurrentUser() {
 }
 
 checkCurrentUser();
+
+const googleLoginButton = document.getElementById("google-login");
+
+googleLoginButton.addEventListener("click", async () => {
+    showStatus("Redirecting to Google...");
+
+    const { error } = await db.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+            redirectTo: `${window.location.origin}/blog/in.html`
+        }
+    });
+
+    if (error) {
+        showStatus(error.message);
+    }
+});

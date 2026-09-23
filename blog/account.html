@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Void.System Blog Account</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Main site logo -->
+    <a class="logo" href="../">
+        <img src="../assets/logo.png" alt="VoidSystem">
+    </a>
+
+    <!-- Void.System -->
+    <img
+        class="void-system"
+        src="../assets/Void.System.png"
+        alt="Void.System"
+    >
+
+    <!-- Blog title -->
+    <header class="blog-header">
+        <h1 id="page-title">ACCOUNT SETTINGS</h1>
+    </header>
+
+    <!-- Account content -->
+    <main class="blog-container">
+        <article class="blog-content account-settings" id="content">
+
+            <div class="profile-section">
+
+                <img
+                    id="profile-avatar"
+                    class="profile-avatar"
+                    src="../assets/logo.png"
+                    alt="Profile"
+                >
+
+                <h2 id="profile-name">Loading...</h2>
+
+                <p id="profile-email"></p>
+
+            </div>
+
+            <button id="logout-button">
+                LOG OUT
+            </button>
+            
+            <a href="index.html" class="back-button">
+                BACK
+            </a>
+
+            <p id="account-status"></p>
+
+        </article>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/account.js"></script>
+
+</body>
+</html>
