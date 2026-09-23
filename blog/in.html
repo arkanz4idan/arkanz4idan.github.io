@@ -51,6 +51,12 @@
                     autocomplete="current-password"
                 >
 
+                <div
+                    class="h-captcha"
+                    data-sitekey="b3fab8be-8e9e-421e-8f1a-e4cef35e5b70"
+                    data-callback="onCaptchaSuccess">
+                </div>
+
                 <div class="auth-buttons">
                     <button id="sign-in">SIGN IN</button>
                     <button id="sign-up">SIGN UP</button>
@@ -67,6 +73,7 @@
         </article>
     </main>
 
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script src="scripts/data.js"></script>

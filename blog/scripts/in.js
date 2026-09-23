@@ -6,8 +6,24 @@ const signUpButton = document.getElementById("sign-up");
 
 const authStatus = document.getElementById("auth-status");
 
+let captchaToken = null;
+
 function showStatus(message) {
     authStatus.textContent = message;
+}
+
+function onCaptchaSuccess(token) {
+    captchaToken = token;
+}
+
+window.onCaptchaSuccess = onCaptchaSuccess;
+
+function resetCaptcha() {
+    captchaToken = null;
+
+    if (window.hcaptcha) {
+        window.hcaptcha.reset();
+    }
 }
 
 signInButton.addEventListener("click", async () => {
@@ -19,9 +35,16 @@ signInButton.addEventListener("click", async () => {
         return;
     }
 
+    if (!captchaToken) {
+        showStatus("Please complete the CAPTCHA.");
+        return;
+    }
+
     showStatus("Signing in...");
 
-    const { error } = await login(email, password);
+    const { error } = await login(email, password, captchaToken);
+
+    resetCaptcha();
 
     if (error) {
         showStatus(error.message);
@@ -45,9 +68,16 @@ signUpButton.addEventListener("click", async () => {
         return;
     }
 
+    if (!captchaToken) {
+        showStatus("Please complete the CAPTCHA.");
+        return;
+    }
+
     showStatus("Creating account...");
 
-    const { error } = await register(email, password);
+    const { error } = await register(email, password, captchaToken);
+
+    resetCaptcha();
 
     if (error) {
         showStatus(error.message);
@@ -59,6 +89,7 @@ signUpButton.addEventListener("click", async () => {
     );
 });
 
+
 async function checkCurrentUser() {
     const user = await getCurrentUser();
 
@@ -66,6 +97,7 @@ async function checkCurrentUser() {
 }
 
 checkCurrentUser();
+
 
 const googleLoginButton = document.getElementById("google-login");
 
@@ -75,7 +107,7 @@ googleLoginButton.addEventListener("click", async () => {
     const { error } = await db.auth.signInWithOAuth({
         provider: "google",
         options: {
-            redirectTo: `${window.location.origin}/blog/in.html`
+            redirectTo: `https://arkanz4idan.github.io/`
         }
     });
 
@@ -83,3 +115,9 @@ googleLoginButton.addEventListener("click", async () => {
         showStatus(error.message);
     }
 });
+
+function onCaptchaSuccess(token) {
+    captchaToken = token;
+}
+
+window.onCaptchaSuccess = onCaptchaSuccess;

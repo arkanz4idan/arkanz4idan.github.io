@@ -21,18 +21,17 @@ async function testDatabase() {
 testDatabase();
 
 async function register(email, password) {
-    const { data, error } = await db.auth.signUp({
-        email,
-        password
-    });
-
+    const { data, error } = await db.auth.signUp({ email, password });
     return { data, error };
 }
 
-async function login(email, password) {
+async function login(email, password, captchaToken) {
     const { data, error } = await db.auth.signInWithPassword({
         email,
-        password
+        password,
+        options: {
+            captchaToken
+        }
     });
 
     return { data, error };
