@@ -50,13 +50,13 @@
                     placeholder="Password"
                     autocomplete="current-password"
                 >
-
-                <div
-                    class="h-captcha"
-                    data-sitekey="b3fab8be-8e9e-421e-8f1a-e4cef35e5b70"
-                    data-callback="onCaptchaSuccess">
-                </div>
-
+                <form method="POST">
+                    <div
+                        class="h-captcha"
+                        data-sitekey="b3fab8be-8e9e-421e-8f1a-e4cef35e5b70"
+                        data-callback="onCaptchaSuccess">
+                    </div>
+                </form>
                 <div class="auth-buttons">
                     <button id="sign-in">SIGN IN</button>
                     <button id="sign-up">SIGN UP</button>

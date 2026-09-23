@@ -115,9 +115,3 @@ googleLoginButton.addEventListener("click", async () => {
         showStatus(error.message);
     }
 });
-
-function onCaptchaSuccess(token) {
-    captchaToken = token;
-}
-
-window.onCaptchaSuccess = onCaptchaSuccess;
